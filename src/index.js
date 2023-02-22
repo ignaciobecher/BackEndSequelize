@@ -8,9 +8,9 @@ import { sequelize } from "./database/database.js";
 async function main() {
   // await sequelize.authenticate();
   // console.log(`Base en linea en el puerto ${3000}`);
-  await sequelize.sync(); //creo las tablas
+  await sequelize.sync({ force: false }); //creo las tablas
   app.listen(4000);
-  console.log("Servidor en lina en el puerto", 3000);
+  console.log("Servidor en lina en el puerto", 4000);
 }
 
 main();
